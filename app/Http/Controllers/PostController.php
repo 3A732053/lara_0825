@@ -45,7 +45,7 @@ class PostController extends Controller
      */
     public function show()
     {
-        return view('show');
+        return view('post');
     }
 
     /**
