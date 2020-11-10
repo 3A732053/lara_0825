@@ -125,11 +125,24 @@ $post -> update
 ]);
 */
 
-#
 /*
 $post = Post::find(1);
 $post -> title = 'saved title';
 $post -> content = 'saved content';
 $post -> save();
 */
+
+#delete方式刪除資料
+/*
+$post = Post::find(1);
+$post -> delete();
+*/
+
+#destroy方式刪除資料
+/*
+Post::destroy(2);
+*/
+
+#destroy方式刪除多筆資料
+Post::destroy(3,5,7);
 
