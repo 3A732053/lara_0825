@@ -144,5 +144,28 @@ Post::destroy(2);
 */
 
 #destroy方式刪除多筆資料
+/*
 Post::destroy(3,5,7);
+*/
 
+#Collection
+/*
+$allPosts = Post::all();
+dd($allPosts);
+*/
+
+/*
+$featuredPosts = Post::where('is_feature',1)->get();
+dd($featuredPosts);
+*/
+
+#Model
+/*
+$fourthPost = Post::find(4);
+dd($fourthPost);
+*/
+
+/*
+$lastPost = Post::orderBy('id','DESC')->first();
+dd($lastPost);
+*/
