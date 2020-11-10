@@ -25,7 +25,18 @@ Route::get('/about',[\App\Http\Controllers\PostController::class, 'about'])->nam
 
 Route::get('/contact',[\App\Http\Controllers\PostController::class, 'contact'])->name('posts.contact');
 
+#new方式新增
+/*
 $post = new Post();
 $post -> title = 'test title';
 $post -> content = 'test content';
 $post -> save();
+*/
+
+#create方式新增
+Post::create
+([
+    'title'=>'test title',
+    'content'=>'text content',
+]);
+
