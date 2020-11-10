@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +24,8 @@ Route::get('/post',[\App\Http\Controllers\PostController::class, 'show'])->name(
 Route::get('/about',[\App\Http\Controllers\PostController::class, 'about'])->name('posts.about');
 
 Route::get('/contact',[\App\Http\Controllers\PostController::class, 'contact'])->name('posts.contact');
+
+$post = new Post();
+$post -> title = 'test title';
+$post -> content = 'test content';
+$post -> save();
