@@ -169,3 +169,10 @@ dd($fourthPost);
 $lastPost = Post::orderBy('id','DESC')->first();
 dd($lastPost);
 */
+
+#印出id為4的貼文底下的所有留言
+$post = Post::find(4);
+foreach($post->comments as $comment)
+{
+    echo $comment->content.'<BR>';
+}
